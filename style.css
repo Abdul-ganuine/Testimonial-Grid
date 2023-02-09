@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #edf2f8;
+}
+.container{
+    width:70%;
+    display: grid;
+    grid-template-areas: 
+    "personone personone persontwo personthree"
+    "personone personone persontwo personthree"
+    "personfour personfive personfive personthree"
+    "personfour personfive personfive personthree"
+    ;
+    gap: 15px;
+}
+.grid-box{
+    padding:20px;
+    border-radius: 10px;
+}
+.personone{
+    background-color: hsl(263, 55%, 52%);
+    grid-area: personone;
+}
+.persontwo{
+    background-color: #49556b;
+    grid-area: persontwo;
+}
+.personthree{
+    background-color: #fff;
+    grid-area: personthree;
+}
+.personfour{
+    background-color: #fff;
+    grid-area: personfour;
+}
+.personfive{
+    background-color: #18202d;
+    grid-area: personfive;
+}
+.info-box{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 60px;
+}
+.img-box{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+}
+.img1{
+    background-image: url(./images/image-daniel.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img2{
+    background-image: url(./images/image-jonathan.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img3{
+    background-image: url(./images/image-kira.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img4{
+    background-image: url(./images/image-jeanette.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img5{
+    background-image: url(./images/image-patrick.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.title-one{
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    width: 80%;
+    margin: 10px 0;
+}
+.personthree .title-one{
+    color: black;
+}
+.personfour .title-one{
+    color: black;
+}
+.more-info{  
+    color: hsl(0, 0%, 81%);
+}
+.person-name{
+    color: hsl(0, 0%, 81%);
+}
+.personfour .person-name{
+    color: hsl(0, 0%, 81%);
+}
+.verify{
+    color: hsl(210, 46%, 95%);
+}
+.personthree .verify{
+    color: #49556b;
+}
+.personfour .verify{
+    color: #49556b;
+}
+@media(max-width:901px){
+    .body{
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .container{
+        width:96%;
+        height:90vh;
+        grid-template-areas: 
+    "personone persontwo personthree"
+    "personone persontwo personthree"
+    "personfour personfive personthree"
+    "personfour personfive personthree"
+    ;
+    }
+}
+@media(max-width:500px){
+    body{
+        height: auto;
+        
+    }
+    .container{
+        width:94%;
+        height:auto;
+        grid-auto-rows: minmax(50px,auto);
+        grid-template-areas: 
+    "personone personone personone personone"
+    "persontwo persontwo persontwo persontwo"
+    "personthree personthree personthree personthree"
+    "personfour personfour personfour personfour"
+    "personfive personfive personfive personfive"
+    ;
+    margin: 20px auto;
+    }
+    .title-one{
+        width: 100%;
+    }
+}    
